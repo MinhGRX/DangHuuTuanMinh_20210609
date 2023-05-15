@@ -1,0 +1,9 @@
+Q1: Is JAVA a Pass by Value or a Pass by Reference programming language?
+- Java is a Pass by Value programming language.
+
+Q2: After the call of swap(jungleDVD, cinderellaDVD)why does the title of these two objects still remain?
+- In this implementation, the swap method takes two DVD objects as parameters and swaps their references using a temporary variable. However, this implementation doesn't actually change any of the data stored in the DVD objects themselves. Therefore, after calling swap(jungleDVD, cinderellaDVD), the titles of jungleDVD and cinderellaDVD should still remain the same, even though their references have been swapped.
+
+Q3: After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle())why is the title of the JungleDVD changed?
+- In this implementation, the changeTitle method takes a DVD object and a String representing the new title as parameters. It then uses the setTitle method of the DVD object to change the title to the new value.
+- Therefore, after calling changeTitle(jungleDVD, cinderellaDVD.getTitle()), the title of jungleDVD should be changed to the title of cinderellaDVD. This is because the getTitle method of cinderellaDVD returns a String containing its title, which is then passed as an argument to the changeTitle method. The setTitle method of jungleDVD is then called with this new title value, effectively changing its title to match that of cinderellaDVD.
