@@ -1,0 +1,8 @@
+Q1: 
+- The class that contains the objects that you want to compare should implement the Comparable interface.
+
+- To reflect the ordering that we want, we should implement the compareTo() method in the class that implements the Comparable interface. This method should return a negative integer if the current object is less than the other object, zero if they are equal, and a positive integer if it's greater than the other object. For example, suppose we want to sort a list of Movie objects by title. In that case, we would implement the compareTo() method for the Movie class to compare the title of one Movie object with another.
+
+- No, we cannot have two ordering rules of an item by using the Comparable interface approach. The Comparable interface provides only one way to compare objects. If we want to have multiple ordering rules, we should use the Comparator interface instead.
+
+- To allow DVDs to have a different ordering rule, we can create a separate class that implements the Comparator interface for DVDs. We would then pass this comparator object to the sorting algorithm whenever we want to sort DVDs. The compare() method in the DVDComparator class should compare DVDs by title, then decreasing length, and finally cost. This way, when we sort a list of Media objects that includes DVDs, the sorting algorithm will use this comparator to sort DVDs differently from other media types.
